@@ -1,0 +1,7 @@
+{
+  "name": "ionicustsapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
