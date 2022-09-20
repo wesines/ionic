@@ -1,16 +1,60 @@
+// import { NgModule } from '@angular/core';
+// import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+// import { AuthGuard } from './guards/auth.guard';
+// import { LoginGuard } from './guards/login.guard';
+// const routes: Routes = [
+//   // {
+//   //   path: 'login',
+//   //   loadChildren: () =>
+//   //     import('./pages/login/login.module').then((m) => m.LoginPageModule),
+//   //  // canLoad: [LoginGuard],
+//   // },
+//   {
+//     path: 'tabs',
+//     loadChildren: () =>
+//       import('./tabs/tabs.module').then((m) => m.TabsPageModule),
+//     // canLoad: [AuthGuard],
+//   },
+//   {
+//     path: '',
+//     loadChildren: () =>
+//       import('./tabs/tabs.module').then((m) => m.TabsPageModule),
+//   },
+
+//   // {
+//   //   path: '',
+//   //   redirectTo: '/login',
+//   //   pathMatch: 'full',
+//   // },
+// ];
+// // const routes: Routes = [
+// //   {
+// //     path: '',
+// //     loadChildren: () =>
+// //       import('./tabs/tabs.module').then((m) => m.TabsPageModule),
+// //   },
+// // ];
+// @NgModule({
+//   imports: [
+//     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
+//   ],
+//   exports: [RouterModule],
+// })
+// export class AppRoutingModule {}
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  }
+    loadChildren: () =>
+      import('./tabs/tabs.module').then((m) => m.TabsPageModule),
+  },
 ];
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}
